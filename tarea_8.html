@@ -1,0 +1,59 @@
+<!doctype html>
+  <html>
+    <head>
+      <meta charset="UTF-8">
+      <title>muerte segura</title>
+      <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+      <script src="http://code.jquery.com/color/jquery.color-2.1.2.min.js"></script>
+      
+      <style type="text/css" media="screen">
+	   .cuadro{
+		   width:50px;
+		   height:50px;
+		   float:left;
+		   margin:5px;
+		   
+		   
+		   
+		   }
+	 
+	  </style>
+      <script type="text/javascript" charset="utf-8">
+	  
+		var colores=["#0C6EFF", "#E8E40B", "#FF0173", "#24E8D9", "#FFBC0C", "#FFFDB0", "#29FEBB", "#8551FE", "#FF1C7A", "#0E0B1E"];
+		
+        function myFunction(){
+			numerousuario = document.getElementById("numero").value;
+			for(i =1; i <= numerousuario; i++){
+				aleatorio = Math.floor(Math.random() * colores.lenght);
+				
+				jQuery("#demo").append('<div class="cuadro" style="background:' + colores[aleatorio] + '"></div>')
+				
+				}
+				$(".cuadro").mouseenter(function(){
+					$(this).animate({
+						width:"70px",
+						height:"70px",
+						}, 100)
+					});
+					
+				$(".cuadro").mouseleave(function(){
+					$(this).animate({
+						width:"50px",
+						height:"50px",
+						
+						}, 100)
+					
+					});
+			};
+        </script>
+    </head>
+    
+    <body>
+    <input type="text"  name="numero" placeholder="Escribe un numero" id="numero">
+    <button onClick="myFunction()">Boton</button>
+    
+    <div id="demo"></div>
+    	
+    </body>
+  </html>

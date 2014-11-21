@@ -1,0 +1,112 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+
+ <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.11.1/themes/smoothness/jquery-ui.css" />
+<link href='http://fonts.googleapis.com/css?family=Ubuntu' rel='stylesheet' type='text/css'>
+
+<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.11.1/jquery-ui.min.js"></script>
+
+<style type="text/css" media="screen">
+	body
+{
+	background-color:#2980b9;
+	text- align:center;
+	color:#FFF;
+	font-family: 'Ubuntu', sans-serif;
+	margin:0;
+	padding:0;
+	}
+	
+h1
+{
+	font-size:20px;
+	text-align:center;
+	margin:auto;
+	padding-top:100px;
+}
+h2
+{
+	font-size:12px;
+	text-align:center;
+	
+	margin:auto;
+	padding-top:40px;
+	}
+#transparencia{
+	width:100%;
+	height:100%;
+	position:absolute;
+	left:0;
+	top:0;
+	border: 30px  solid #000;
+	border-bottom:90px solid #000;
+	box-sizing:border-box;
+	
+	
+	
+}
+#contenido
+{
+	width:100%;
+	heiht:100%;
+	background:black;
+	opacity:.5;
+	}
+	
+	
+	
+#botonuno{
+	background-color:white;
+	width:50px;
+	height:50px;
+    margin:0 auto;
+	position:absolute;
+	left:50%;
+	top:90%;
+	}
+	
+	#botondos{
+	background-color:red;
+	width:50px;
+	height:50px;
+    margin:0 auto;
+	position:absolute;
+	left:50%;
+	top:90%;
+	}
+
+</style>
+
+
+<title>Evaluación</title>
+
+
+<body>
+	
+   
+<div id="contenido">
+  <div id="botonuno"></div>
+  <div id="transparencia">
+            	
+                <div id="botondos"></div>
+            </div>
+         
+</div>
+   	 <h1>Evaluación Inicial</h1>
+    	<h2>Tec Web 1</h2>
+
+<script type="text/javascript" charset="utf-8">
+ $(document).ready(function(e){
+	$("#botonuno").click(function(){
+		$("#transparencia").toggle("fade");
+	});
+	$("#botondos").click(function(){
+		$("#transparencia").toggle("fade");
+	});
+});
+</script>
+</body>
+</html>
